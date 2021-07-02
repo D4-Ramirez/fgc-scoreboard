@@ -16,13 +16,13 @@ export default {
     return {
       p1: {
         name: "D4",
+        team: "TH",
         score: 0,
-        team: "CLUST",
       },
       p2: {
         name: "Luigi",
+        team: "VG",
         score: 0,
-        team: "CLUST",
       },
       round: "Grand Finals",
     };
