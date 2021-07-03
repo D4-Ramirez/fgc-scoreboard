@@ -25,7 +25,7 @@ export default {
     return {
       p1: {
         name: "D4",
-        team: "TH",
+        team: "CLUST",
         score: 0,
       },
       p2: {
@@ -33,7 +33,7 @@ export default {
         team: "CLUST",
         score: 0,
       },
-      round: "Money Match FT10",
+      round: "Money Match FT15",
     };
   },
 };

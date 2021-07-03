@@ -19,12 +19,12 @@ export default {
   width: 273px;
   height: 48.6px;
   left: 822.7px;
-  top: 0px;
+  top: 5px;
 }
 
 #round {
   position: relative;
   top: 8px;
-  font-size: 30px;
+  font-size: 27px;
 }
 </style>

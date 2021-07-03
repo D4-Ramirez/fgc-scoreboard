@@ -1,11 +1,13 @@
 <template>
-  <div id="player">
-    <div id="scWrapper">
-      <span id="score">{{ score }}</span>
+  <div id="player1">
+    <div id="p1SBox">
+      <span id="p1Score">{{ score }}</span>
     </div>
-    <div id="info">
-      <span id="team">{{ team }}</span>
-      <span id="name">{{ name }}</span>
+    <div id="p1IBox">
+      <div id="p1Info">
+        <span id="p1Team">{{ team }}</span>
+        <span id="p1Name">{{ name }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -22,18 +24,40 @@ export default {
 </script>
 
 <style>
-#scWrapper {
+#p1SBox {
+  position: absolute;
   width: 70.5px;
   height: 50px;
   left: 574.227px;
   top: 62px;
-  position: absolute;
 }
 
-#score {
+#p1Score {
   position: relative;
   top: 10px;
   font-size: 40px;
   color: black;
+}
+
+#p1IBox {
+  position: absolute;
+  width: 427.1px;
+  height: 50px;
+  left: 147.175px;
+  top: 62px;
+}
+
+#p1Info {
+  position: relative;
+  top: 12px;
+  font-size: 30px;
+}
+
+#p1Name {
+  color: white;
+}
+
+#p1Team {
+  color: lightseagreen;
 }
 </style>
