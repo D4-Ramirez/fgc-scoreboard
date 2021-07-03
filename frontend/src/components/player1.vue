@@ -1,6 +1,8 @@
 <template>
   <div id="player">
-    <span id="score">{{ score }}</span>
+    <div id="scWrapper">
+      <span id="score">{{ score }}</span>
+    </div>
     <div id="info">
       <span id="team">{{ team }}</span>
       <span id="name">{{ name }}</span>
@@ -19,4 +21,19 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+#scWrapper {
+  width: 70.5px;
+  height: 50px;
+  left: 574.227px;
+  top: 62px;
+  position: absolute;
+}
+
+#score {
+  position: relative;
+  top: 10px;
+  font-size: 40px;
+  color: black;
+}
+</style>

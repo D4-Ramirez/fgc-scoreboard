@@ -1,16 +1,25 @@
 <template>
   <div id="app">
-    <scoreboard :round="round" :p1="p1" :p2="p2" />
+    <Animation />
+    <Player1 :name="this.p1.name" :team="this.p1.team" :score="this.p1.score" />
+    <Player2 :name="this.p2.name" :team="this.p2.team" :score="this.p2.score" />
+    <Round :round="this.round" />
   </div>
 </template>
 
 <script>
-import Scoreboard from "./components/scoreboard.vue";
+import Player1 from "./components/player1.vue";
+import Player2 from "./components/player2.vue";
+import Round from "./components/round.vue";
+import Animation from "./components/animation.vue";
 
 export default {
   name: "App",
   components: {
-    Scoreboard,
+    Player1,
+    Player2,
+    Round,
+    Animation,
   },
   data() {
     return {
@@ -21,13 +30,24 @@ export default {
       },
       p2: {
         name: "Luigi",
-        team: "VG",
+        team: "CLUST",
         score: 0,
       },
-      round: "Grand Finals",
+      round: "Money Match FT10",
     };
   },
 };
 </script>
 
-<style></style>
+<style>
+body {
+  width: 1920px;
+  height: 1080px;
+  text-align: center;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+}
+</style>
