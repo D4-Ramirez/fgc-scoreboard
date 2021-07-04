@@ -2,7 +2,7 @@
   <div id="animation">
     <lottie-animation
       ref="anim"
-      :animationData="require('../assets/animations/data.json')"
+      :animationData="require('../assets/animations/animation.json')"
       :loop="false"
       :autoPlay="true"
     />
