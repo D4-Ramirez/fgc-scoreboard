@@ -24,8 +24,8 @@ export default {
   data() {
     return {
       p1: {
-        name: "D4",
-        team: "CLUST",
+        name: "KaiserD",
+        team: "WUL3",
         score: 0,
       },
       p2: {
@@ -33,7 +33,7 @@ export default {
         team: "CLUST",
         score: 0,
       },
-      round: "Money Match FT15",
+      round: "Winners Quarters",
     };
   },
 };
@@ -50,4 +50,36 @@ body {
   color: white;
   font-family: "Josefin Sans", sans-serif;
 }
+
+.sBoxes {
+  position: absolute;
+  width: 70.5px;
+  height: 50px;
+  top: 62px;
+}
+
+.iBoxes {
+  position: absolute;
+  width: 427.1px;
+  height: 50px;
+  top: 62px;
+}
+
+.scores {
+  position: relative;
+  top: 9px;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+}
+
+.pInfo {
+  position: relative;
+  top: 12px;
+  font-size: 30px;
+}
+
+.teams {
+  color: rgb(255, 0, 0);
+}
+
 </style>
