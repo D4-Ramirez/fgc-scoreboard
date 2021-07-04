@@ -26,5 +26,6 @@ export default {
   position: relative;
   top: 8px;
   font-size: 27px;
+  opacity: 0;
 }
 </style>

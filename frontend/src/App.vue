@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import gsap from "gsap";
 import Player1 from "./components/player1.vue";
 import Player2 from "./components/player2.vue";
 import Round from "./components/round.vue";
@@ -36,6 +37,28 @@ export default {
       round: "Winners Quarters",
     };
   },
+  mounted() {
+    this.startAnimation();
+  },
+  methods: {
+    startAnimation() {
+      gsap.to(".scores", {
+        css: { opacity: 1 },
+        ease: "Quad.easeOut",
+        delay: 1,
+      });
+      gsap.to("#round", {
+        css: { opacity: 1 },
+        ease: "Quad.easeOut",
+        delay: 1,
+      });
+      gsap.to(".pInfo", {
+        css: { opacity: 1 },
+        ease: "Quad.easeOut",
+        delay: 1,
+      });
+    },
+  },
 };
 </script>
 
@@ -47,7 +70,7 @@ body {
   overflow: hidden;
   margin: 0px;
   padding: 0px;
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -69,6 +92,7 @@ body {
   position: relative;
   top: 9px;
   font-size: 40px;
+  opacity: 0;
   color: rgb(0, 0, 0);
 }
 
@@ -76,10 +100,10 @@ body {
   position: relative;
   top: 12px;
   font-size: 30px;
+  opacity: 0;
 }
 
 .teams {
   color: rgb(255, 0, 0);
 }
-
 </style>
