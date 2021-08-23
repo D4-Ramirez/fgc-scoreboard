@@ -1,0 +1,154 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="700" height="350" tabbed="1">
+	<tab name="Match Paises">
+		<!-- Player 1 -->
+		<label x="10" y="14" width="46" height="13">Player 1</label>
+		<lineEdit id="nombre_p1" x="60" y="10" width="120" height="20" dataSet="jugadores.csv" dataField="1" />
+		<lineEdit id="equipo_p1" x="190" y="10" width="70" height="20" dataSet="jugadores.csv" dataField="2" master="nombre_p1" />
+		<lineEdit id="pais_p1" x="270" y="10" width="60" height="20" dataSet="jugadores.csv" dataField="3" master="nombre_p1"/>
+		<spinBox id="marcador_p1" x="340" y="10" width="42" height="22" maximum="10" />
+		<!-- Player 2 -->
+		<label x="10" y="44" width="46" height="13">Player 2</label>
+		<lineEdit id="nombre_p2" x="60" y="40" width="120" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="equipo_p2" x="190" y="40" width="70" height="20" dataSet="jugadores.csv" dataField="2" master="nombre_p2"/>
+		<lineEdit id="pais_p2" x="270" y="40" width="60" height="20" dataSet="jugadores.csv" dataField="3" master="nombre_p2"/>
+		<spinBox id="marcador_p2" x="340" y="40" width="42" height="22" maximum="10" />
+		<!-- Ronda -->
+		<label x="10" y="75" width="46" height="13">Round</label>
+		<lineEdit id="ronda" x="60" y="70" width="120" height="22" dataSet="ronda.csv" dataField="1"/>
+		<!-- Buttons -->
+		<button type="reset" x="10" y="100" width="41" height="23" tooltip="Clear everything" id="clear" reset="nombre_p1,marcador_p1,equipo_p1,nombre_p2,marcador_p2,equipo_p2,ronda,pais_p1,pais_p2">Clear</button>
+		<button type="swap" x="56" y="100" width="41" height="23" tooltip="Swap the Scores" id="swap1" swapSet1="nombre_p1,marcador_p1,equipo_p1,pais_p1" swapSet2="nombre_p2,marcador_p2,equipo_p2,pais_p2">Swap</button>
+		<button type="reset" x="102" y="100" width="41" height="23" tooltip="Reset the Scores" id="reset" reset="marcador_p1,marcador_p2">Reset</button>  
+	</tab>
+	<tab name="Match No Paises">
+		<!-- Player 1 -->
+		<label x="10" y="14" width="46" height="13">Player 1</label>
+		<lineEdit id="nombre_p1" x="60" y="10" width="120" height="20" dataSet="jugadores.csv" dataField="1" />
+		<lineEdit id="equipo_p1" x="190" y="10" width="70" height="20" dataSet="jugadores.csv" dataField="2" master="nombre_p1" />
+		<spinBox id="marcador_p1" x="270" y="10" width="42" height="22" maximum="10" />
+		<!-- Player 2 -->
+		<label x="10" y="44" width="46" height="13">Player 2</label>
+		<lineEdit id="nombre_p2" x="60" y="40" width="120" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="equipo_p2" x="190" y="40" width="70" height="20" dataSet="jugadores.csv" dataField="2" master="nombre_p2"/>
+		<spinBox id="marcador_p2" x="270" y="40" width="42" height="22" maximum="10" />
+		<!-- Round -->
+		<label x="10" y="75" width="46" height="13">Round</label>
+		<lineEdit id="ronda" x="60" y="70" width="120" height="22" dataSet="ronda.csv" dataField="1"/>
+		<!-- Buttons -->
+		<button type="reset" x="10" y="100" width="41" height="23" tooltip="Clear everything" id="clear_jugadores" reset="nombre_p1,marcador_p1,equipo_p1,nombre_p2,marcador_p2,equipo_p2,ronda">Clear</button>
+		<button type="swap" x="56" y="100" width="41" height="23" tooltip="Swap the Scores" id="swap_jugadores" swapSet1="nombre_p1,marcador_p1,equipo_p1" swapSet2="nombre_p2,marcador_p2,equipo_p2">Swap</button>
+		<button type="reset" x="102" y="100" width="41" height="23" tooltip="Reset the Scores" id="reset_jugadores" reset="marcador_p1,marcador_p2">Reset</button>
+	</tab>
+	<tab name="Casters">
+		<!-- Caster 1 -->
+		<label x="10" y="14" width="46" height="13" >Name 1</label>
+		<lineEdit id="comentarista_1" x="60" y="10" width="120" height="20" dataSet="comentaristas.csv" dataField="1" />
+		<label x="190" y="14" width="46" height="13">Nick</label>
+		<lineEdit id="nick_1" x="220" y="10" width="120" height="20" dataSet="comentaristas.csv" dataField="2" master="comentarista_1" />
+		<!-- Caster 2 -->
+		<label x="10" y="44" width="46" height="13">Name 2</label>
+		<lineEdit id="comentarista_2" x="60" y="40" width="120" height="20" dataSet="comentaristas.csv" dataField="1" />
+		<label x="190" y="44" width="46" height="13">Nick</label>
+		<lineEdit id="nick_2" x="220" y="40" width="120" height="20" dataSet="comentaristas.csv" dataField="2" master="comentarista_2" />
+		<!-- Buttons -->
+		<button type="reset" x="10" y="70" width="41" height="23" tooltip="Clear everything" id="clear_comentario" reset="comentarista_1,nick_1,comentarista_2,nick_2">Clear</button>
+		<button type="swap" x="56" y="70" width="41" height="23" tooltip="Swap the scores" id="swap_comentario" swapSet1="comentarista_1,nick_1" swapSet2="comentarista_2,nick_2">Swap</button>
+	</tab>
+	<tab name="Top 8" scrollable="1">
+		<!-- Winners Semis-->
+		<label x="90" y="10" width="75" height="13" > Winners Semis </label>
+		<lineEdit id="p1_ws" x="10" y="30" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_ws" x="90" y="30" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_ws"/>
+		<lineEdit id="c1_ws" x="160" y="30" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_ws"/>
+		<spinBox id="m1_ws" x="230" y="30" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_ws" x="10" y="60" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_ws" x="90" y="60" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_ws"/>
+		<lineEdit id="c2_ws" x="160" y="60" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_ws"/>
+		<spinBox id="m2_ws" x="230" y="60" width="42" height="22" maximum="3" />
+		<lineEdit id="p3_ws" x="10" y="100" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t3_ws" x="90" y="100" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p3_ws"/>
+		<lineEdit id="c3_ws" x="160" y="100" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p3_ws"/>
+		<spinBox id="m3_ws" x="230" y="100" width="42" height="22" maximum="3" />
+		<lineEdit id="p4_ws" x="10" y="130" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t4_ws" x="90" y="130" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p4_ws"/>
+		<lineEdit id="c4_ws" x="160" y="130" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p4_ws"/>
+		<spinBox id="m4_ws" x="230" y="130" width="42" height="22" maximum="3" />
+		<!-- Winners Finals -->
+		<label x="400" y="10" width="75" height="13" > Winners Finals </label>
+		<lineEdit id="p1_wf" x="320" y="70" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_wf" x="400" y="70" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_wf"/>
+		<lineEdit id="c1_wf" x="470" y="70" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_wf"/>
+		<spinBox id="m1_wf" x="540" y="70" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_wf" x="320" y="100" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_wf" x="400" y="100" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_wf"/>
+		<lineEdit id="c2_wf" x="470" y="100" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_wf"/>
+		<spinBox id="m2_wf" x="540" y="100" width="42" height="22" maximum="3" />
+		<!-- Grand Finals -->
+		<label x="700" y="10" width="75" height="13" > Grand Finals </label>
+		<lineEdit id="p1_gf" x="620" y="70" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_gf" x="700" y="70" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_gf"/>
+		<lineEdit id="c1_gf" x="770" y="70" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_gf"/>
+		<spinBox id="m1_gf" x="840" y="70" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_gf" x="620" y="100" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_gf" x="700" y="100" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_gf"/>
+		<lineEdit id="c2_gf" x="770" y="100" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_gf"/>
+		<spinBox id="m2_gf" x="840" y="100" width="42" height="22" maximum="3" />
+		<!-- Losers -->
+		<label x="90" y="180" width="75" height="13" > Losers </label>
+		<lineEdit id="p1_l" x="10" y="200" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_l" x="90" y="200" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_l"/>
+		<lineEdit id="c1_l" x="160" y="200" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_l"/>
+		<spinBox id="m1_l" x="230" y="200" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_l" x="10" y="230" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_l" x="90" y="230" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_l"/>
+		<lineEdit id="c2_l" x="160" y="230" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_l"/>
+		<spinBox id="m2_l" x="230" y="230" width="42" height="22" maximum="3" />
+		<lineEdit id="p3_l" x="10" y="270" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t3_l" x="90" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p3_l"/>
+		<lineEdit id="c3_l" x="160" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p3_l"/>
+		<spinBox id="m3_l" x="230" y="270" width="42" height="22" maximum="3" />
+		<lineEdit id="p4_l" x="10" y="300" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t4_l" x="90" y="300" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p4_l"/>
+		<lineEdit id="c4_l" x="160" y="300" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p4_l"/>
+		<spinBox id="m4_l" x="230" y="300" width="42" height="22" maximum="3" />
+		<!-- Losers Quarters -->
+		<label x="400" y="180" width="80" height="13" > Losers Quarters </label>
+		<lineEdit id="p1_lq" x="320" y="200" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_lq" x="400" y="200" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_lq"/>
+		<lineEdit id="c1_lq" x="470" y="200" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_lq"/>
+		<spinBox id="m1_lq" x="540" y="200" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_lq" x="320" y="230" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_lq" x="400" y="230" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_lq"/>
+		<lineEdit id="c2_lq" x="470" y="230" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_lq"/>
+		<spinBox id="m2_lq" x="540" y="230" width="42" height="22" maximum="3" />
+		<lineEdit id="p3_lq" x="320" y="270" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t3_lq" x="400" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p3_lq"/>
+		<lineEdit id="c3_lq" x="470" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p3_lq"/>
+		<spinBox id="m3_lq" x="540" y="270" width="42" height="22" maximum="3" />
+		<lineEdit id="p4_lq" x="320" y="300" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t4_lq" x="400" y="300" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p4_lq"/>
+		<lineEdit id="c4_lq" x="470" y="300" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p4_lq"/>
+		<spinBox id="m4_lq" x="540" y="300" width="42" height="22" maximum="3" />
+		<!-- Loser Semis -->
+		<label x="700" y="180" width="75" height="13" > Losers Semis </label>
+		<lineEdit id="p1_ls" x="620" y="240" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_ls" x="700" y="240" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_ls"/>
+		<lineEdit id="c1_ls" x="770" y="240" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_ls"/>
+		<spinBox id="m1_ls" x="840" y="240" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_ls" x="620" y="270" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_ls" x="700" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_ls"/>
+		<lineEdit id="c2_ls" x="770" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_ls"/>
+		<spinBox id="m2_ls" x="840" y="270" width="42" height="22" maximum="3" />
+		<!-- Losers Finals -->
+		<label x="1000" y="180" width="75" height="13" > Losers Finals </label>
+		<lineEdit id="p1_lf" x="920" y="240" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t1_lf" x="1000" y="240" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p1_lf"/>
+		<lineEdit id="c1_lf" x="1070" y="240" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p1_lf"/>
+		<spinBox id="m1_lf" x="1140" y="240" width="42" height="22" maximum="3" />
+		<lineEdit id="p2_lf" x="920" y="270" width="75" height="20" dataSet="jugadores.csv" dataField="1"/>
+		<lineEdit id="t2_lf" x="1000" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="2" master="p2_lf"/>
+		<lineEdit id="c2_lf" x="1070" y="270" width="65" height="20" dataSet="jugadores.csv" dataField="3" master="p2_lf"/>
+		<spinBox id="m2_lf" x="1140" y="270" width="42" height="22" maximum="3" />
+	</tab>
+</layout>

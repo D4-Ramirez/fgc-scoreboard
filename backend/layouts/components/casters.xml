@@ -1,0 +1,15 @@
+<tab name="Casters">
+		<!-- Caster 1 -->
+		<label x="10" y="14" width="46" height="13" >Name 1</label>
+		<lineEdit id="comentarista_1" x="60" y="10" width="120" height="20" dataSet="comentaristas.csv" dataField="1" />
+		<label x="190" y="14" width="46" height="13">Nick</label>
+		<lineEdit id="nick_1" x="220" y="10" width="120" height="20" dataSet="comentaristas.csv" dataField="2" master="comentarista_1" />
+		<!-- Caster 2 -->
+		<label x="10" y="44" width="46" height="13">Name 2</label>
+		<lineEdit id="comentarista_2" x="60" y="40" width="120" height="20" dataSet="comentaristas.csv" dataField="1" />
+		<label x="190" y="44" width="46" height="13">Nick</label>
+		<lineEdit id="nick_2" x="220" y="40" width="120" height="20" dataSet="comentaristas.csv" dataField="2" master="comentarista_2" />
+		<!-- Buttons -->
+		<button type="reset" x="10" y="70" width="41" height="23" tooltip="Clear everything" id="clear_comentario" reset="comentarista_1,nick_1,comentarista_2,nick_2">Clear</button>
+		<button type="swap" x="56" y="70" width="41" height="23" tooltip="Swap the scores" id="swap_comentario" swapSet1="comentarista_1,nick_1" swapSet2="comentarista_2,nick_2">Swap</button>
+	</tab>

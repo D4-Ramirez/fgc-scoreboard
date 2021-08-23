@@ -1,0 +1,19 @@
+<tab name="Match No Paises">
+  <!-- Player 1 -->
+  <label x="10" y="14" width="46" height="13">Player 1</label>
+  <lineEdit id="nombre_p1" x="60" y="10" width="120" height="20" dataSet="jugadores.csv" dataField="1" />
+  <lineEdit id="equipo_p1" x="190" y="10" width="70" height="20" dataSet="jugadores.csv" dataField="2" master="nombre_p1" />
+  <spinBox id="marcador_p1" x="270" y="10" width="42" height="22" maximum="10" />
+  <!-- Player 2 -->
+  <label x="10" y="44" width="46" height="13">Player 2</label>
+  <lineEdit id="nombre_p2" x="60" y="40" width="120" height="20" dataSet="jugadores.csv" dataField="1"/>
+  <lineEdit id="equipo_p2" x="190" y="40" width="70" height="20" dataSet="jugadores.csv" dataField="2" master="nombre_p2"/>
+  <spinBox id="marcador_p2" x="270" y="40" width="42" height="22" maximum="10" />
+  <!-- Round -->
+  <label x="10" y="75" width="46" height="13">Round</label>
+  <lineEdit id="ronda" x="60" y="70" width="120" height="22" dataSet="ronda.csv" dataField="1"/>
+  <!-- Buttons -->
+  <button type="reset" x="10" y="100" width="41" height="23" tooltip="Clear everything" id="clear_jugadores" reset="nombre_p1,marcador_p1,equipo_p1,nombre_p2,marcador_p2,equipo_p2,ronda">Clear</button>
+  <button type="swap" x="56" y="100" width="41" height="23" tooltip="Swap the Scores" id="swap_jugadores" swapSet1="nombre_p1,marcador_p1,equipo_p1" swapSet2="nombre_p2,marcador_p2,equipo_p2">Swap</button>
+  <button type="reset" x="102" y="100" width="41" height="23" tooltip="Reset the Scores" id="reset_jugadores" reset="marcador_p1,marcador_p2">Reset</button>
+</tab>

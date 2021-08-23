@@ -1,0 +1,30 @@
+<!DOCTYPE StreamControlLayout>
+<layout width="500" height="400" tabbed="1">
+	<tab name="Match">
+		<label x="10" y="14" width="46" height="13">Player 1</label>
+		<label x="10" y="44" width="46" height="13">Player 2</label>
+		<label x="10" y="74" width="46" height="13">Round</label>
+		<lineEdit id="p1Name" x="60" y="10" width="120" height="20" dataSet="players.csv" dataField="1" />
+		<lineEdit id="p1Team" x="190" y="10" width="70" height="20" dataSet="players.csv" dataField="2" master="p1Name" />
+		<spinBox id="p1Score" x="270" y="10" width="42" height="22" maximum="10" />
+		<lineEdit id="p2Name" x="60" y="40" width="120" height="20" dataSet="players.csv" dataField="1"/>
+		<lineEdit id="p2Team" x="190" y="40" width="70" height="20" dataSet="players.csv" dataField="2" master="p2Name"/>
+		<spinBox id="p2Score" x="270" y="40" width="42" height="22" maximum="10" />
+		<lineEdit id="round" x="60" y="70" width="180" height="22" dataSet="rounds.csv" dataField="1"/>
+		<button type="reset" x="320" y="10" width="41" height="23" tooltip="Clear everything" id="clear_players" reset="p1Name,p1Team,p1Score,p2Name,p2Team,p2Score">Clear</button>
+		<button type="swap" x="320" y="40" width="41" height="23" tooltip="Swap the Scores" id="swap_players" swapSet1="p1Name,p1Team,p1Score" swapSet2="p2Name,p2Team,p2Score">Swap</button>
+		<button type="reset" x="370" y="40" width="41" height="23" tooltip="Reset the Scores" id="reset_score" reset="marcador_p1,marcador_p2">Reset</button>
+	</tab>
+	<tab name="Casters">
+		<label x="10" y="14" width="46" height="13" >Name 1</label>
+		<label x="190" y="14" width="46" height="13">Nick</label>
+		<label x="10" y="44" width="46" height="13">Name 2</label>
+		<label x="190" y="44" width="46" height="13">Nick</label>
+		<lineEdit id="c1Name" x="60" y="10" width="120" height="20" dataSet="casters.csv" dataField="1" />
+		<lineEdit id="c1Nick" x="220" y="10" width="120" height="20" dataSet="casters.csv" dataField="2" master="c1Name" />
+		<lineEdit id="c2Name" x="60" y="40" width="120" height="20" dataSet="casters.csv" dataField="1" />
+		<lineEdit id="c2Nick" x="220" y="40" width="120" height="20" dataSet="casters.csv" dataField="2" master="c2Name" />
+		<button type="reset" x="60" y="70" width="41" height="23" tooltip="Clear everything" id="clear_casters" reset="c1Name,c1Nick,c2Name,c2Nick">Clear</button>
+		<button type="swap" x="110" y="70" width="41" height="23" tooltip="Swap the scores" id="swap_casters" swapSet1="c1Name,c1Nick" swapSet2="c2Name,c2Nick">Swap</button> 
+	</tab>
+</layout>
