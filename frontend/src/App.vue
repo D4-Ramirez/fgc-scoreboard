@@ -1,13 +1,14 @@
 <template>
   <div id="app">
     <Animation />
-    <Player1 :name="this.p1.name" :team="this.p1.team" :score="this.p1.score" />
-    <Player2 :name="this.p2.name" :team="this.p2.team" :score="this.p2.score" />
-    <Round :round="this.round" />
+    <Player1 :name="data.p1Name" :team="data.p1Team" :score="data.p1Score" />
+    <Player2 :name="data.p2Name" :team="data.p2Team" :score="data.p2Score" />
+    <Round :round="data.round" />
   </div>
 </template>
 
 <script>
+import json from "./assets/streamcontrol.json";
 import gsap from "gsap";
 import Player1 from "./components/player1.vue";
 import Player2 from "./components/player2.vue";
@@ -24,17 +25,7 @@ export default {
   },
   data() {
     return {
-      p1: {
-        name: "KaiserD",
-        team: "WUL3",
-        score: 0,
-      },
-      p2: {
-        name: "Luigi",
-        team: "CLUST",
-        score: 0,
-      },
-      round: "Winners Quarters",
+      data: json,
     };
   },
   mounted() {
@@ -104,6 +95,6 @@ body {
 }
 
 .teams {
-  color: rgb(255, 0, 0);
+  color: rgb(53, 91, 128);
 }
 </style>
