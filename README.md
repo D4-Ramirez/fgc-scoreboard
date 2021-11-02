@@ -1,1 +1,1 @@
-# Scoreboard for Fighting Games broadcasr
+# Scoreboard for Fighting Games broadcast
