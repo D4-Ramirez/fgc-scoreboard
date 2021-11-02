@@ -5,7 +5,7 @@
     </div>
     <div id="p1IBox" class="iBoxes">
       <div id="p1Info" class="pInfo">
-        <span id="p1Team" class="teams">{{ team }}</span>
+        <span id="p1Team" class="teams">{{ team }} </span>
         <span id="p1Name" class="names">{{ name }}</span>
       </div>
     </div>
@@ -18,7 +18,7 @@ export default {
   props: {
     name: String,
     team: String,
-    score: Number,
+    score: String,
   },
 };
 </script>
