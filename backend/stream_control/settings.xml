@@ -1,12 +1,8 @@
 <!DOCTYPE StreamControl>
 <settings>
  <altHotkeyHandling>0</altHotkeyHandling>
- <challonge>
-  <apiKey>cbrWELcuevKiiyvWO27TxszU3fvDfPGErXpSj8Eu</apiKey>
-  <username>IID4II</username>
- </challonge>
  <format>2</format>
  <layoutPath>layout.xml</layoutPath>
- <outputPath>..\overlay\match_info\</outputPath>
+ <outputPath>..\..\frontend\src\assets\</outputPath>
  <useCDATA>0</useCDATA>
 </settings>
