@@ -1,1 +1,1 @@
-# vue_scoreboard
+# Scoreboard for Fighting Games broadcasr
